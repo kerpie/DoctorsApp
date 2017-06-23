@@ -1,7 +1,5 @@
 package co.herovitamin.doctorsapp.pacients_list;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -19,17 +17,15 @@ import co.herovitamin.doctorsapp.R;
 public class PacientsListFragment extends Fragment implements PacientListContract.View {
 
     @BindView(R.id.pacients_list)
-    private RecyclerView pacientsList;
+    RecyclerView pacientsList;
 
     @BindView(R.id.pacients_loader)
-    private ProgressBar pacientsLoader;
+    ProgressBar pacientsLoader;
 
     @BindView(R.id.new_pacient_button)
-    private FloatingActionButton newPacientButton;
+    FloatingActionButton newPacientButton;
 
     PacientListContract.Presenter presenter;
-
-    private OnFragmentInteractionListener mListener;
 
     public PacientsListFragment() {}
 
@@ -55,22 +51,6 @@ public class PacientsListFragment extends Fragment implements PacientListContrac
     public void onStart() {
         super.onStart();
         presenter.start();
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
     }
 
     @Override
@@ -106,9 +86,5 @@ public class PacientsListFragment extends Fragment implements PacientListContrac
     @Override
     public void hideNewPacientButton() {
         newPacientButton.setVisibility(View.GONE);
-    }
-
-    public interface OnFragmentInteractionListener {
-        void onFragmentInteraction(Uri uri);
     }
 }

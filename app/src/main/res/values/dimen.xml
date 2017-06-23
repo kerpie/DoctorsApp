@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="splash_font_size_big">35sp</dimen>
-    <dimen name="splash_progress_bar_size">40dp</dimen>
-    <dimen name="splash_loader_margin">20dp</dimen>
+    <dimen name="progress_bar_size">40dp</dimen>
+    <dimen name="standard_margin_large">20dp</dimen>
+    <dimen name="standard_margin_medium">15dp</dimen>
+    <dimen name="standard_margin_small">10dp</dimen>
+    <dimen name="standard_margin_micro">5dp</dimen>
 </resources>

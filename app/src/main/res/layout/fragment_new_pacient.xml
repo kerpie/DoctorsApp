@@ -1,0 +1,184 @@
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/new_pacient_fragment_container"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/name_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="@dimen/standard_margin_small">
+
+            <EditText
+                android:id="@+id/pacient_new_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pacient_new_name_hint"
+                android:lines="1"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/age_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_container"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="@dimen/standard_margin_small">
+
+            <EditText
+                android:id="@+id/pacient_new_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pacient_new_age_hint"
+                android:inputType="number"
+                android:lines="1"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/gender_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pacient_new_gender_label"
+            android:layout_marginTop="@dimen/standard_margin_small"
+            android:layout_marginLeft="@dimen/standard_margin_small"
+            android:layout_marginRight="@dimen/standard_margin_small"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age_container"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="@dimen/standard_margin_small"
+            android:layout_marginEnd="@dimen/standard_margin_small" />
+
+        <RadioGroup
+            android:id="@+id/gender_options_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/standard_margin_micro"
+            android:layout_marginLeft="@dimen/standard_margin_small"
+            android:layout_marginRight="@dimen/standard_margin_small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_label"
+            android:layout_marginStart="@dimen/standard_margin_small"
+            android:layout_marginEnd="@dimen/standard_margin_small">
+
+            <RadioButton
+                android:id="@+id/radio_option_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pacient_new_gender_option_one"
+                android:layout_marginRight="@dimen/standard_margin_large"
+                android:checked="true"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_option_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pacient_new_gender_option_two"
+                android:layout_marginLeft="@dimen/standard_margin_large"
+                />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/migraine_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pacient_new_migraine_label"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_options_container"
+            android:layout_margin="@dimen/standard_margin_small"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/new_pacient_has_migraine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/migraine_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_options_container"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintBottom_toBottomOf="@+id/migraine_label"
+
+            android:layout_marginTop="@dimen/standard_margin_small"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginRight="@dimen/standard_margin_small"
+            android:layout_marginEnd="@dimen/standard_margin_small" />
+
+        <TextView
+            android:id="@+id/drugs_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pacient_new_drugs_label"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/migraine_label"
+            android:layout_marginTop="@dimen/standard_margin_large"
+            android:layout_marginLeft="@dimen/standard_margin_small"
+            android:layout_marginStart="@dimen/standard_margin_small" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/new_pacient_does_drugs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/drugs_label"
+            app:layout_constraintTop_toBottomOf="@+id/new_pacient_has_migraine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="@dimen/standard_margin_small"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintBottom_toBottomOf="@+id/drugs_label"
+            android:layout_marginEnd="@dimen/standard_margin_small" />
+
+        <Button
+            android:id="@+id/new_pacient_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/standard_margin_micro"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drugs_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/standard_margin_small"
+            android:text="@string/pacient_new_save"
+            android:theme="@style/ButtonStyle"
+            app:layout_constraintVertical_bias="1"/>
+
+        <FrameLayout
+            android:id="@+id/progress_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/transparentGray"
+            android:visibility="gone"
+            >
+            <ProgressBar
+                android:id="@+id/new_pacient_loader"
+                android:layout_width="@dimen/progress_bar_size"
+                android:layout_height="@dimen/progress_bar_size"
+                android:layout_gravity="center"
+
+                />
+        </FrameLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
