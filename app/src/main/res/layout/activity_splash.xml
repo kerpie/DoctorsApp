@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="co.herovitamin.doctorsapp.splash.SplashActivity"
+    android:id="@+id/splash_container">
+
+    <TextView
+        android:id="@+id/splash_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/splash_main_text"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/splash_font_size_big"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/splash_loader"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/splash_loader_margin"
+        />
+
+</RelativeLayout>
