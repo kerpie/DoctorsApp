@@ -94,8 +94,8 @@ public class NewPacientFragment extends Fragment implements PacientNewContract.V
                 pacientName.getText().toString(),
                 pacientAge.getText().toString(),
                 genderIsMale,
-                hasMigraine.isActivated(),
-                doesDrugs.isActivated()
+                hasMigraine.isChecked(),
+                doesDrugs.isChecked()
         );
     }
 

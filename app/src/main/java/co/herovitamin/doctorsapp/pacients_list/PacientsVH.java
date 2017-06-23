@@ -4,7 +4,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import co.herovitamin.doctorsapp.R;
 import co.herovitamin.doctorsapp.model.Pacient;
 
 /**
@@ -13,7 +15,9 @@ import co.herovitamin.doctorsapp.model.Pacient;
 
 public class PacientsVH extends RecyclerView.ViewHolder {
 
+    @BindView(R.id.pacient_name)
     TextView name;
+    @BindView(R.id.pacient_result)
     TextView result;
 
     public PacientsVH(View itemView) {

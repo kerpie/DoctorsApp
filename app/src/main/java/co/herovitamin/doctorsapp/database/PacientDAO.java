@@ -15,7 +15,7 @@ import co.herovitamin.doctorsapp.model.Pacient;
 @Dao
 public interface PacientDAO {
 
-    @Query("SELECT * FROM pacient")
+    @Query("SELECT * FROM pacient ORDER BY id DESC")
     List<Pacient> getAll();
 
     @Insert

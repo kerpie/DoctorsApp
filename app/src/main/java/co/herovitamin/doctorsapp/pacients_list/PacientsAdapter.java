@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.zip.Inflater;
 
 import co.herovitamin.doctorsapp.R;
@@ -17,9 +18,9 @@ import co.herovitamin.doctorsapp.model.Pacient;
 
 public class PacientsAdapter extends RecyclerView.Adapter<PacientsVH> {
 
-    ArrayList<Pacient> items;
+    List<Pacient> items;
 
-    public PacientsAdapter(ArrayList<Pacient> items) {
+    public PacientsAdapter(List<Pacient> items) {
         this.items = items;
     }
 

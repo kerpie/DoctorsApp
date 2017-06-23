@@ -14,4 +14,5 @@
     <string name="error_name_message">Pacient name can\'t be empty</string>
     <string name="error_age_message">Please enter a valid age</string>
     <string name="error_db_message">Couldn\'t save pacient data, please try again later</string>
+    <string name="error_message_db_empty">There aren\'t any patiens at this moment, try adding one</string>
 </resources>
