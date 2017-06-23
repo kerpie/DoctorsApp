@@ -63,4 +63,17 @@ public class Pacient {
     public void setDoingDrugs(boolean doingDrugs) {
         isDoingDrugs = doingDrugs;
     }
+
+    public int predict(){
+        int tmp = 0;
+        if(isHavingMigraine())
+            tmp += 25;
+        if (age < 15 )
+            tmp += 25;
+        if(isDoingDrugs())
+            tmp += 25;
+        if(isGender())
+            tmp += 25;
+        return tmp;
+    }
 }
