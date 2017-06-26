@@ -8,6 +8,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import co.herovitamin.doctorsapp.R;
 import co.herovitamin.doctorsapp.model.Pacient;
+import co.herovitamin.doctorsapp.model.Predictor;
 
 /**
  * Created by kerry on 23/06/17.
@@ -27,6 +28,8 @@ public class PacientsVH extends RecyclerView.ViewHolder {
 
     public void bind(Pacient pacient){
         this.name.setText(pacient.getName());
-        this.result.setText(pacient.predict() + "%");
+        this.result.setText(
+                Predictor.predict(pacient.getAge(), pacient.isHavingMigraine(), pacient.isDoingDrugs(), pacient.isGender()) + "%"
+        );
     }
 }

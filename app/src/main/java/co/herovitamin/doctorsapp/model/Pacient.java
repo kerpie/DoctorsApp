@@ -94,19 +94,6 @@ public class Pacient {
         isDoingDrugs = doingDrugs;
     }
 
-    public int predict(){
-        int tmp = 0;
-        if(isHavingMigraine())
-            tmp += 25;
-        if (age < 15 )
-            tmp += 25;
-        if(isDoingDrugs())
-            tmp += 25;
-        if(isGender())
-            tmp += 25;
-        return tmp;
-    }
-
     public boolean isValid(){
         if(getName().length() > 0 && getAge() > 0)
             return true;
